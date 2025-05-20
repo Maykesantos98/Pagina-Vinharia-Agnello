@@ -115,7 +115,7 @@ header .container {
 
 /* ===== BANNER PRINCIPAL ===== */
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x800') no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('/css/img/capa.png') no-repeat center/cover;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -355,7 +355,7 @@ header .container {
     max-width: 500px;
     margin: 0 auto;
     gap: 10px;
-    flex-wrap: wrap;
+    flex-wrap:wrap-reverse;
 }
 
 .newsletter-form input {
@@ -443,6 +443,31 @@ footer {
     transition: color 0.2s ease;
 }
 
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #2c1a1d;
+    border-radius: 50%;
+    color: #d1b495;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #8c1c24;
+    color: #fff;
+    transform: rotate(360deg); /* Transformação: rotação completa */
+    transition: transform 0.5s ease; /* Transição suave */
+}
+
 /* Pseudo-classe para links do footer */
 .footer-links a:hover {
     color: #e6c9a8;
@@ -456,43 +481,3 @@ footer {
     color: #8c6e63;
 }
 
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .logo {
-        margin-bottom: 15px;
-    }
-    
-    .historia-content {
-        flex-direction: column;
-    }
-    
-    .cards-container {
-        justify-content: center;
-    }
-    
-    .banner-content h2 {
-        font-size: 2.2rem;
-    }
-    
-    .newsletter-form {
-        flex-direction: column;
-    }
-    
-    .newsletter-form button {
-        width: 100%;
-    }
-    
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .social-icons {
-        justify-content: center;
-    }
-}

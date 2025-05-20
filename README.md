@@ -35,7 +35,7 @@ Este projeto consiste em uma página web para a Vinharia Agnello, uma vinícola 
 Mayke Costa Santos RM562680
 
 ## Links
-- [Repositório no GitHub](https://github.com/seu-usuario/checkpoint03-flexbox)
+- [Repositório no GitHub](https://github.com/Maykesantos98/Pagina-Vinharia-Agnello.git)
 - [GitHub Pages](https://seu-usuario.github.io/checkpoint03-flexbox)
 
 ## Observações
