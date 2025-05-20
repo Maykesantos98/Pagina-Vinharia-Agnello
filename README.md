@@ -36,7 +36,7 @@ Mayke Costa Santos RM562680
 
 ## Links
 - [Repositório no GitHub](https://github.com/Maykesantos98/Pagina-Vinharia-Agnello.git)
-- [GitHub Pages](https://seu-usuario.github.io/checkpoint03-flexbox)
+- [GitHub Pages](https://maykesantos98.github.io/sitepage/)
 
 ## Observações
 Este projeto foi desenvolvido como parte do Check-point 3 de Front-End, com foco em layout com Flexbox e efeitos visuais com CSS.
