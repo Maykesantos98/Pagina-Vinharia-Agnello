@@ -2,7 +2,7 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 
-const html = fs.readFileSync('flex-layout.html', 'utf8');
+const html = fs.readFileSync('index.html', 'utf8');
 const css = fs.readFileSync('css/flex-style.css', 'utf8');
 const script = fs.existsSync('js/main.js') ? fs.readFileSync('js/main.js', 'utf8') : '';
 

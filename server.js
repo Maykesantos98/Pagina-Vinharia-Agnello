@@ -6,7 +6,7 @@ const root = __dirname;
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.png': 'image/png' };
 
 http.createServer((request, response) => {
-  const requested = request.url === '/' ? '/flex-layout.html' : request.url.split('?')[0];
+  const requested = request.url === '/' ? '/index.html' : request.url.split('?')[0];
   const file = path.resolve(root, `.${requested}`);
   if (!file.startsWith(root)) { response.writeHead(403).end('Forbidden'); return; }
   fs.readFile(file, (error, data) => {
