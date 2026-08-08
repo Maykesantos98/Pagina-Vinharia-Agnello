@@ -18,6 +18,12 @@ with sync_playwright() as playwright:
         page.get_by_role("button", name="Adicionar").first.click()
         assert page.locator("#cart-count").inner_text() == "1"
         assert "adicionado" in page.locator(".toast").inner_text()
+        page.locator(".cart-button").click()
+        assert page.locator("#cart-drawer").get_attribute("aria-hidden") == "false"
+        assert "Riserva della Casa" in page.locator("#cart-items").inner_text()
+        assert "189,90" in page.locator("#cart-total").inner_text()
+        assert page.locator("#checkout-button").is_enabled()
+        page.get_by_role("button", name="Fechar sacola").click()
         if name == "mobile":
             page.get_by_role("button", name="Abrir menu").click()
             assert page.locator(".menu").get_attribute("class") == "menu open"

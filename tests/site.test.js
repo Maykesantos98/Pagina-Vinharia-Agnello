@@ -27,6 +27,16 @@ test('provides interactive purchase and newsletter feedback', () => {
   assert.doesNotMatch(html, /href="#"/);
 });
 
+test('provides a complete cart and checkout flow', () => {
+  assert.match(html, /id="cart-drawer"/);
+  assert.match(html, /id="cart-items"/);
+  assert.match(html, /id="cart-total"/);
+  assert.match(html, /id="checkout-button"/);
+  assert.match(script, /wa\.me/);
+  assert.match(script, /encodeURIComponent/);
+  assert.doesNotMatch(script, /disponível em breve/i);
+});
+
 test('supports responsive and reduced-motion experiences', () => {
   assert.match(css, /@media\s*\(max-width:/);
   assert.match(css, /prefers-reduced-motion/);
