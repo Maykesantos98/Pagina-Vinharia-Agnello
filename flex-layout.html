@@ -89,15 +89,15 @@
         <div class="wine-grid">
           <article class="wine-card">
             <div class="wine-visual"><span class="wine-tag">Mais escolhido</span><img src="css/img/vinho.png" width="500" height="500" alt="Garrafa do vinho Agnello Tinto Reserva" loading="lazy"></div>
-            <div class="wine-info"><p class="wine-type">Tinto · 750 ml</p><h3>Riserva della Casa</h3><p>Cabernet Sauvignon & Merlot</p><div class="wine-buy"><strong>R$ 189,90</strong><button type="button" data-add-to-cart="Riserva della Casa">Adicionar <span aria-hidden="true">＋</span></button></div></div>
+            <div class="wine-info"><p class="wine-type">Tinto · 750 ml</p><h3>Riserva della Casa</h3><p>Cabernet Sauvignon & Merlot</p><div class="wine-buy"><strong>R$ 189,90</strong><button type="button" data-add-to-cart="Riserva della Casa" data-price="189.90" data-image="css/img/vinho.png">Adicionar <span aria-hidden="true">＋</span></button></div></div>
           </article>
           <article class="wine-card featured">
             <div class="wine-visual"><span class="wine-tag">Safra limitada</span><img src="css/img/vinho2.png" width="500" height="500" alt="Garrafa do vinho Agnello Chardonnay Premium" loading="lazy"></div>
-            <div class="wine-info"><p class="wine-type">Branco · 750 ml</p><h3>Chardonnay Dorato</h3><p>Frutas tropicais & baunilha</p><div class="wine-buy"><strong>R$ 159,90</strong><button type="button" data-add-to-cart="Chardonnay Dorato">Adicionar <span aria-hidden="true">＋</span></button></div></div>
+            <div class="wine-info"><p class="wine-type">Branco · 750 ml</p><h3>Chardonnay Dorato</h3><p>Frutas tropicais & baunilha</p><div class="wine-buy"><strong>R$ 159,90</strong><button type="button" data-add-to-cart="Chardonnay Dorato" data-price="159.90" data-image="css/img/vinho2.png">Adicionar <span aria-hidden="true">＋</span></button></div></div>
           </article>
           <article class="wine-card">
             <div class="wine-visual"><span class="wine-tag">Nova safra</span><img src="css/img/vinho3.png" width="500" height="500" alt="Garrafa do vinho Rosé Agnello" loading="lazy"></div>
-            <div class="wine-info"><p class="wine-type">Rosé · 750 ml</p><h3>Rosato di Serra</h3><p>Frutas vermelhas & flores</p><div class="wine-buy"><strong>R$ 129,90</strong><button type="button" data-add-to-cart="Rosato di Serra">Adicionar <span aria-hidden="true">＋</span></button></div></div>
+            <div class="wine-info"><p class="wine-type">Rosé · 750 ml</p><h3>Rosato di Serra</h3><p>Frutas vermelhas & flores</p><div class="wine-buy"><strong>R$ 129,90</strong><button type="button" data-add-to-cart="Rosato di Serra" data-price="129.90" data-image="css/img/vinho3.png">Adicionar <span aria-hidden="true">＋</span></button></div></div>
           </article>
         </div>
       </div>
@@ -144,6 +144,17 @@
     <div class="container footer-bottom"><p>© <span id="year">2026</span> Vinharia Agnello</p><p>Beba com moderação. Venda proibida para menores de 18 anos.</p><a href="#topo">Voltar ao topo ↑</a></div>
   </footer>
 
+  <div class="cart-backdrop" data-close-cart></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+    <header class="cart-header"><div><p class="eyebrow dark">Sua seleção</p><h2 id="cart-title">Sacola</h2></div><button type="button" class="cart-close" data-close-cart aria-label="Fechar sacola">×</button></header>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-summary">
+      <div><span>Subtotal</span><strong id="cart-total">R$ 0,00</strong></div>
+      <p>Frete calculado durante o atendimento.</p>
+      <a class="button button-dark" id="checkout-button" target="_blank" rel="noopener" aria-disabled="true">Finalizar pelo WhatsApp <span aria-hidden="true">↗</span></a>
+      <small>Ao continuar, seu pedido será enviado à equipe Agnello para confirmação.</small>
+    </div>
+  </aside>
   <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
 </html>

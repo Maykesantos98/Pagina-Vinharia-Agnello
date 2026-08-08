@@ -23,6 +23,7 @@ with sync_playwright() as playwright:
         assert "Riserva della Casa" in page.locator("#cart-items").inner_text()
         assert "189,90" in page.locator("#cart-total").inner_text()
         assert page.locator("#checkout-button").is_enabled()
+        assert page.locator("#checkout-button").get_attribute("href").startswith("https://wa.me/555434559000?text=")
         page.get_by_role("button", name="Fechar sacola").click()
         if name == "mobile":
             page.get_by_role("button", name="Abrir menu").click()
