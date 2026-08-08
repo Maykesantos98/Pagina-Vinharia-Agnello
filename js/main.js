@@ -31,7 +31,7 @@ if (!Number.isFinite(cart) || cart < 0) cart = 0;
 
 function updateCart() {
   cartCount.textContent = String(cart);
-  cartButton.setAttribute('aria-label', `Abrir sacola, ${cart} ${cart === 1 ? 'item' : 'itens'}`);
+  cartButton.setAttribute('aria-label', `Sacola com ${cart} ${cart === 1 ? 'item' : 'itens'}`);
 }
 
 let toastTimer;
@@ -49,6 +49,10 @@ document.querySelectorAll('[data-add-to-cart]').forEach((button) => {
     updateCart();
     showToast(`${button.dataset.addToCart} foi adicionado à sua sacola.`);
   });
+});
+
+cartButton.addEventListener('click', () => {
+  showToast(cart === 0 ? 'Sua sacola está vazia.' : `Sua sacola tem ${cart} ${cart === 1 ? 'vinho' : 'vinhos'}. Checkout disponível em breve.`);
 });
 
 newsletter.addEventListener('submit', (event) => {

@@ -24,6 +24,7 @@ test('provides interactive purchase and newsletter feedback', () => {
   assert.match(html, /id="newsletter-status"/);
   assert.match(script, /aria-expanded/);
   assert.match(script, /localStorage/);
+  assert.doesNotMatch(html, /href="#"/);
 });
 
 test('supports responsive and reduced-motion experiences', () => {
